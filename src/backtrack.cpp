@@ -1,4 +1,5 @@
 #include "backtrack.h"
+#include "utils.h"
 
 namespace backtrack {
 
@@ -20,6 +21,8 @@ std::vector<std::set<uint32_t>> find_solution_set(
           if (currScore > bestScore) {
             bestScore = currScore;
             std::cout << "Found new best score of " << bestScore << std::endl;
+            std::cout << "Previous solutions...\n";
+            printResult(res, bit2words);
 
             res.clear();
           }
