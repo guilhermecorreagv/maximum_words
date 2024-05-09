@@ -2,10 +2,12 @@
 
 The goal of this small project is to find the set of words in portuguese that cover the most amount of characters with no repetition.
 
-There are two cpp files:
-- `maximum_words.cpp`: This file will recursively check for every set of words (it's really slow) but finds intermediate solutions.
-- `perfect_pangram.cpp`: This file looks only for perfect pangrams. TO BE IMPLEMENTED
+There are two approaches:
+- Brute force backtrack: will try to find every possible subset covering the maximum amount of letters.
+- Perfect pangram: Will try directly to find a set of words that cover the 26 letters from the alphabet.
 
-The file `wordsList` contains a list of words in the portuguese language. The file should have this name and be located in the same folder of the cpps.
+The implementations of these solutions are located in `src/maximum_words.cpp` and `src/perfect_pangram.cpp` respectively.
+
+The file `data/wordsList` contains a list of words in the portuguese language. The file should have this name and be located in the same path.
 
 Please note that this file is not optimal since there are a lot of acronyms and some english words.
