@@ -16,7 +16,7 @@ std::vector<std::set<uint32_t>> find_solution_set(
   std::function<void(int, uint32_t, int, std::set<uint32_t>)> backtrack =
       [&](int idx, uint32_t currSum, int currScore,
           std::set<uint32_t> currSet) {
-        if (idx == bitwords.size()) {
+        if (idx == (int)bitwords.size()) {
           // termination
           if (currScore > bestScore) {
             bestScore = currScore;

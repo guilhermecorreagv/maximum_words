@@ -18,7 +18,8 @@ bool validLine(std::string &line) {
   // - do not have repeated characters
   // - only contain alphabetic characters (no ç or -)
   std::set<char> seen;
-  for (auto c : line) {
+  for (auto ch : line) {
+    char c = tolower(ch);
     if (line.length() < MINIMUM_LETTERS)
       return false;
     if (seen.find(c) != seen.end() || !isalpha(c))
@@ -70,11 +71,11 @@ int main() {
 
   std::vector<std::set<uint32_t>> res;
 
-  // res = pangram::find_solution_set(bitwordsvec, bit2words); // solution
-  // trying to find perfect pangram
+  // solution for perfect pangram
+  res = pangram::find_solution_set(bitwordsvec, bit2words);
 
-  res = backtrack::find_solution_set(bitwordsvec, bit2words); // brute
-  // force backtrack solution
+  //  brute force backtrack solution
+  // res = backtrack::find_solution_set(bitwordsvec, bit2words);
 
   std::cout << "Number of solutions found " << res.size() << std::endl;
 
