@@ -1,5 +1,9 @@
 # Maximum Words
 
+<p align="center">
+<img src="./thumb/thumb.jpeg" width=320>
+</p>
+
 The goal of this small project is to find the set of words in portuguese that cover the most amount of characters with no repetition.
 
 There are two approaches:
